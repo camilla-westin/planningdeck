@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <img src="./assets/logo.svg" width="200" alt="Chas logotype" />
     <h1>Planning poker</h1>
     <Deck />
   </div>

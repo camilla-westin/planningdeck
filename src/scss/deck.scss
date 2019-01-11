@@ -1,3 +1,5 @@
+@import './variables.scss';
+
 .cards {
     display: flex;
     justify-content: center;
@@ -6,9 +8,18 @@
 }
 
 .card {
+    background: white;
     width: 200px;
     height: 300px;
-    border: 1px solid #000;
-    background: grey;
+    border: 1px solid #000;  
     margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .complexity {
+        font-size: 70px;
+        color: $blue;
+        line-height: 65px;
+    }
 }

@@ -2,7 +2,7 @@
   <div id="deck">
       <div class="cards">
         <div v-for="card in cards" :key="card.index" class="card">
-            {{ card.complexity }}
+            <span class="complexity">{{ card.complexity }}</span>
         </div>
       </div>
   </div>
