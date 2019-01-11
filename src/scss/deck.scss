@@ -5,21 +5,40 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+
+    @media (min-width: $desktop-break) {
+        max-width: 1024px;
+        margin: 60px auto 0 auto;
+    }
 }
 
 .card {
     background: white;
-    width: 200px;
-    height: 300px;
-    border: 1px solid #000;  
-    margin: 20px;
+    width: calc(50% - 60px);
+    height: 160px;
+    margin: 10px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 
+    @media (min-width: $phone-break) {
+        width: calc(33.3% - 60px);
+    }
+
+    @media (min-width: $desktop-break) {
+        width: calc(20% - 60px);
+        height: 220px;
+    }
+
     .complexity {
-        font-size: 70px;
         color: $blue;
-        line-height: 65px;
+        font-size: 45px;    
+        line-height: 40px;
+
+        @media (min-width: $desktop-break) {
+            font-size: 70px;
+            line-height: 65px;
+        }
     }
 }
