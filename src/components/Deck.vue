@@ -1,20 +1,37 @@
 <template>
-  <div id="deck">This should show the deck
-      <card></card>
+  <div id="deck">
+      <div class="cards">
+        <div v-for="card in cards" :key="card.index" class="card">
+            {{ card.complexity }}
+        </div>
+      </div>
   </div>
 </template>
 
 <script>
-import Card from './Card.vue'
 
 export default {
-  name: 'app',
-  components: {
-    Card
+  name: 'Deck',
+  data() {
+      return {
+          cards: [
+            { complexity: '1' } ,
+            { complexity: '2' },
+            { complexity: '3' },
+            { complexity: '5' },
+            { complexity: '8' },
+            { complexity: '13' },
+            { complexity: '20' },
+            { complexity: '40' },
+            { complexity: '100' },
+            { complexity: "I don't know" },
+        ]
+      }
   }
+
 }
 </script>
 
 <style lang="scss">
- 
+      @import '../scss/deck.scss';
 </style>

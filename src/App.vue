@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <deck></deck>
+    <h1>Planning poker</h1>
+    <Deck />
   </div>
 </template>
 
