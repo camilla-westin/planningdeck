@@ -7,7 +7,7 @@
     flex-wrap: wrap;
 
     @media (min-width: $desktop-break) {
-        max-width: 1024px;
+        max-width: 1200px;
         margin: 60px auto 0 auto;
     }
 }
@@ -22,6 +22,14 @@
     &.selected {
         display: block; 
     }
+
+    @media (min-width: $phone-break) {
+        width: calc(25%);
+    }
+
+    @media (min-width: $desktop-break) {
+        width: calc(16.6%);
+    }
 }
 
 .card {
@@ -32,14 +40,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4px;
+    border-radius: 4px; 
 
-    @media (min-width: $phone-break) {
-        width: calc(33.3% - 60px);
+    &:hover,
+    &:focus,
+    &:active {
+        cursor: pointer;
     }
 
     @media (min-width: $desktop-break) {
-        width: calc(20% - 60px);
+        height: 160px;
+    }
+
+    @media (min-width: $xldesktop-break) {
         height: 220px;
     }
 
@@ -71,4 +84,3 @@
 .flip-leave {
     display: none;
 }
-

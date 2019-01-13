@@ -19,3 +19,25 @@ h1 {
     font-size: 20px;
     margin: 2px 0 20px 0;
 }
+
+
+button {
+    display: none;
+    background-color: $pink;
+    width: 250px;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 35px;
+    font-size: 19px;
+    color: white;
+    text-align: center;
+    transition: background-color .2s ease-in;
+    margin: 20px auto;
+    border: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        background-color: $pinkhover;
+    }
+}
