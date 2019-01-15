@@ -7,6 +7,7 @@
                     <span class="complexity">{{ card.complexity }}</span>
                 </div>
                 <div v-else class="card card-back">
+                    <img src="../assets/logo.svg" width="90" alt="Chas logotype" />
                     <span class="back">Reveal on click</span>
                 </div>
             </transition>

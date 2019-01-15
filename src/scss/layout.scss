@@ -1,12 +1,23 @@
 @import './variables.scss';
 
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
 body {
-    background: $darkgrey;
     color: white;
+    background-image: linear-gradient(bottom right, $blue, #0F7FA1);
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: $Font;
 }
 
 #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    font-family: $Font;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
@@ -18,6 +29,7 @@ h1 {
     text-transform: uppercase;
     font-size: 20px;
     margin: 2px 0 20px 0;
+    font-weight: 500;
 }
 
 
@@ -27,17 +39,25 @@ button {
     width: 250px;
     text-transform: uppercase;
     border-radius: 0;
-    padding: 10px 35px;
+    padding: 12px 35px;
+    font-family: $Font;
+    font-weight: 500;
     font-size: 19px;
     color: white;
     text-align: center;
-    transition: background-color .2s ease-in;
-    margin: 20px auto;
+    margin: 50px auto 20px auto;
     border: none;
+    transition: all 0.5s;
+    position: relative;
+    border: 1px solid $pinkhover;
+    overflow: hidden;
+    transition: all .25s ease-in-out;
 
     &:hover,
     &:focus,
     &:active {
-        background-color: $pinkhover;
+        cursor: pointer;
+        background: $pinkhover;
+    
     }
 }
