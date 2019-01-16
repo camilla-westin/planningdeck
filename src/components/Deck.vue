@@ -7,7 +7,7 @@
             </div>
             <div v-else class="card card-back">
                 <img src="../assets/logo.svg" width="90" alt="Chas logotype" />
-                <span>Reveal on click</span>
+                <span>Click to reveal card</span>
             </div>
         </div>
       </div>
