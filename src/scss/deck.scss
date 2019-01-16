@@ -5,6 +5,7 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    margin: 50px auto 0 auto;
 
     @media (min-width: $desktop-break) {
         max-width: 1200px;
@@ -79,17 +80,4 @@
         font-size: 14px;
         background-color: $darkgrey;
     }
-}
-
-.flip-enter-active {
-    transition: all 0.4s ease;
-}
-
-.flip-enter {
-    transform: rotateY(180deg);
-    opacity: 0;
-}
-
-.flip-leave {
-    display: none;
 }

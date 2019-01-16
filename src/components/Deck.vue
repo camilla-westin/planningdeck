@@ -2,15 +2,13 @@
   <div id="deck">
       <div class="cards">
         <div v-for="card in cardsList" :key="card.index" v-on:click="selectCard(card)" class="card-wrap" v-bind:class="{'selected' : card.selected }"> 
-            <transition name="flip">
-                <div v-if="card.revealed" class="card card-front">
-                    <span class="complexity">{{ card.complexity }}</span>
-                </div>
-                <div v-else class="card card-back">
-                    <img src="../assets/logo.svg" width="90" alt="Chas logotype" />
-                    <span class="back">Reveal on click</span>
-                </div>
-            </transition>
+            <div v-if="card.revealed" class="card card-front">
+                <span class="complexity">{{ card.complexity }}</span>
+            </div>
+            <div v-else class="card card-back">
+                <img src="../assets/logo.svg" width="90" alt="Chas logotype" />
+                <span>Reveal on click</span>
+            </div>
         </div>
       </div>
       <button id="restart" v-on:click="reLoad()">Start over</button>
@@ -38,6 +36,7 @@ export default {
   name: 'Deck',
   data() {
       return {
+          //Get card data from array
           cardsList: cards
       }
   },
